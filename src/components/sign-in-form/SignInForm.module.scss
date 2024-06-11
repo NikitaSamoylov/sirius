@@ -1,0 +1,136 @@
+@import '../../styles/vars';
+
+.form {
+
+  &__title {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    color: $primary-font-color;
+    font-weight: 400;
+    margin-bottom: 17px;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+  }
+
+  &__input {
+    display: block;
+    font-size: 1.2rem;
+    padding: 10px 12px;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #fff;
+    font-family: inherit;
+    transition: .3s;
+  }
+
+  &__input:focus {
+    outline: 1px solid $form-btn-bg-color;
+  }
+
+  &__input::placeholder {
+    color: $placeholder-font-color;
+    font-size: 1.2rem;
+  }
+
+  &__input_error {
+    font-size: 1.2rem;
+    color: red;
+  }
+
+  &__password {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__password_icon {
+    position: absolute;
+    top: 41%;
+    transform: translateY(-50%);
+    right: 11px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 8px;
+    margin-bottom: 35px;
+  }
+
+  &__checkbox_label {
+    font-size: 1.2rem;
+    color: $form-secondary-color;
+  }
+
+  &__checkbox_input {
+    width: 16px;
+    height: 16px;
+    border-color: #C8C5CD;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 8px;
+  }
+
+  &__btn {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid $form-btn-bg-color;
+    background-color: $form-btn-bg-color;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 13px;
+    text-align: center;
+    font-family: inherit;
+    color: #fff;
+    margin-bottom: 13px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 76px;
+  }
+
+  &__link_item {
+    color: $form-link-text-color;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+
+  &__register_item {
+    display: block;
+    color: #323854;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  &__register_item_item {
+    display: block;
+    color: $form-link-text-color;
+    background-color: transparent;
+    font-family: inherit;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    margin-top: 6px;
+  }
+}

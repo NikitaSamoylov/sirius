@@ -1,0 +1,43 @@
+@import '../../styles/vars';
+
+.promo {
+  position: relative;
+  padding: 16px 16px 10px 16px;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 196px;
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $promo-font-color;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  &__description {
+    max-width: 146px;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'Circe-Light';
+  }
+
+  &__btn {
+    font-size: 1.2rem;
+    color: $promo-font-color;
+    background-color: $promo-bg-color;
+    border-radius: 30px;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 15px;
+  }
+}

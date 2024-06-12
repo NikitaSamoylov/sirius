@@ -45,15 +45,6 @@ const SignIn: React.FC = () => {
             )
           })
         }
-        {/* <span className={ styles.signin__lang_item }>
-          ru
-        </span> */}
-        {/* <span className={
-          `${ styles.signin__lang_item }
-            ${ styles.signin__lang_item_item }`
-        }>
-          en
-        </span> */}
       </div>
     </section>
   )

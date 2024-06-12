@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import styles from './SignInForm.module.scss';
 
@@ -16,7 +17,9 @@ const SignInForm: React.FC = () => {
 
   const passRef = useRef('password');
 
-  passRef.current = showPassword ? 'text' : 'password'
+  passRef.current = showPassword ? 'text' : 'password';
+
+  const navigate = useNavigate();
 
   const handlePassword = () => {
     setShowPassword(showPassword => !showPassword);
@@ -31,9 +34,10 @@ const SignInForm: React.FC = () => {
     mode: 'onBlur'
   });
 
-  const onSubmit = (data: TInputs) => {
+  const onSubmit = async (data: TInputs) => {
     console.log(data);
-    reset()
+    reset();
+    navigate('/account/main');
   };
 
   return (

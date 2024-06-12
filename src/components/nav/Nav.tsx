@@ -23,12 +23,12 @@ const navItems: TNavItem[] = [
   {
     title: 'Главная',
     logo: <MainIcon />,
-    link: '/',
+    link: '/account',
   },
   {
     title: 'Расписание',
     logo: <SheduleIcon />,
-    link: '/shedule',
+    link: 'shedule',
   },
   {
     title: 'Оплата',
@@ -88,6 +88,7 @@ const Nav: React.FC = () => {
                       ${ styles.nav__link_active }` :
                       styles.nav__link
                   }
+                  end
                 >
                   { el.logo }
                   <span className={ styles.nav__title }>

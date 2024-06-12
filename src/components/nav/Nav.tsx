@@ -23,7 +23,7 @@ const navItems: TNavItem[] = [
   {
     title: 'Главная',
     logo: <MainIcon />,
-    link: '/account',
+    link: 'main',
   },
   {
     title: 'Расписание',
@@ -33,37 +33,37 @@ const navItems: TNavItem[] = [
   {
     title: 'Оплата',
     logo: <PaymentIcon />,
-    link: '/payment',
+    link: 'payment',
   },
   {
     title: 'Достижения',
     logo: <AchivementsIcon />,
-    link: '/achivements',
+    link: 'achivements',
   },
   {
     title: 'Тренажеры',
     logo: <ExercisesIcon />,
-    link: '/exercises',
+    link: 'exercises',
   },
   {
     title: 'Библиотека',
     logo: <LibraryIcon />,
-    link: '/library',
+    link: 'library',
   },
   {
     title: 'Проверка связи',
     logo: <CheckLogo />,
-    link: '/check',
+    link: 'check',
   },
   {
     title: 'Настройки',
     logo: <SettingsIcon />,
-    link: '/settings',
+    link: 'settings',
   },
   {
     title: 'Вопросы',
     logo: <QuestionsIcon />,
-    link: '/questions',
+    link: 'questions',
   },
 ];
 

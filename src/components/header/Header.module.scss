@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-box-shadow: -1px 7px 6px -6px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -1px 7px 6px -6px rgba(34, 60, 80, 0.2);
+  box-shadow: -1px 7px 6px -6px rgba(34, 60, 80, 0.2);
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 58px;
+  }
+
+  &__icon {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__icon_user {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__icon_arrow {
+    display: block;
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,29 @@
+.date {
+
+  &__days,
+  &__hours,
+  &__minutes,
+  &__seconds {
+    color: #323854;
+    font-size: 3.6rem;
+    line-height: 3.5rem;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  &__days {
+    align-items: flex-end !important;
+  }
+
+  &__descr {
+    position: relative;
+    top: 8px;
+    font-size: 1.5rem;
+    color: #323854;
+    align-self: flex-end;
+    margin-left: 4px;
+    margin-right: 12px;
+  }
+}

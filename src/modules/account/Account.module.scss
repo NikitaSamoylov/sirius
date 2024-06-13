@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__content {
+    flex-grow: 2;
+  }
+}

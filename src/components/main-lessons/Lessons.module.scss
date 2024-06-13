@@ -1,0 +1,103 @@
+.lessons {
+  padding: 28px 28px 30px 28px;
+  border: 1px solid #7362BC;
+  border-radius: 30px;
+  overflow-y: visible;
+  width: 710px;
+
+  &__list {
+    width: 623px;
+    margin-bottom: 44px;
+  }
+
+  &__list_title {
+    font-family: 'Circe-Light';
+    color: #323854;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 22px;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid #EEEEFF;
+    margin-bottom: 10px;
+    padding-bottom: 9px;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__date_day {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+  &__date_month {
+    color: #323854;
+    font-size: 1.2rem;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    color: #323854;
+    width: 183px;
+  }
+
+  &__time {
+    font-size: 1.2rem;
+    color: #323854;
+  }
+
+  &__teacher {
+    display: flex;
+    align-items: center;
+  }
+
+  &__teacher_name {
+    display: block;
+    margin-left: 2px;
+    color: #323854;
+    font-family: 'Circe-Light';
+    width: 120px;
+  }
+
+  &__btns {
+    width: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    display: block;
+    font-size: 1.2rem;
+    color: #323854;
+    padding: 8px 10px;
+    border: 1px solid #8D7FC7;
+    border-radius: 15px;
+    background-color: transparent;
+  }
+
+  &__btn_active {
+    background-color: #8D7FC7;
+    color: #fff;
+  }
+
+  &__btn_disabled {
+    border-color: #EEEEFF !important;
+  }
+
+  &__main_btn {
+    text-align: center;
+  }
+}

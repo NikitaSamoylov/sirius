@@ -1,8 +1,10 @@
+import Shedule from "../../modules/shedule/Shedule";
+
 const ShedulePage: React.FC = () => {
 
   return (
-    <section style={ { backgroundColor: 'yellow', marginTop: 30 } }>
-      <h1>Shedule Page</h1>
+    <section>
+      <Shedule />
     </section>
   )
 };

@@ -30,8 +30,8 @@ const initialState: TShedule[] = [
         end: 'Wed Jun 12 2024 18: 55: 26 GMT +0500',
       },
       {
-        start: 'Wed Jun 13 2024 20: 55: 26 GMT +0500',
-        end: 'Wed Jun 12 2024 21: 55: 26 GMT +0500',
+        start: 'Wed Jun 14 2024 20: 55: 26 GMT +0500',
+        end: 'Wed Jun 14 2024 21: 55: 26 GMT +0500',
       },
       {
         start: '2024-07-03T09:33:23.000Z',

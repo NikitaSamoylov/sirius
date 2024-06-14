@@ -3,12 +3,12 @@ import { useAppSelector } from '../../hooks';
 import HeaderPopup from '../header-popup/HeaderPopup';
 import styles from './Header.module.scss';
 
-import AvatarImg from './avatar.png';
 import ChatImg from './chat-icon.png';
 import ArrowImg from './Path.png';
 
 const Header: React.FC = () => {
   const messagesStore = useAppSelector(state => state.messages);
+  const activeUser = useAppSelector(state => state.activeUser);
 
   const [isModal, setIsModal] = useState(false);
 
@@ -18,6 +18,14 @@ const Header: React.FC = () => {
 
   return (
     <div className={ styles.header }>
+      <div className={ styles.greetings }>
+        <span className={ styles.greetings__text }>
+          Добро пожаловать,
+          <span className={ styles.greetings__name }>
+            { activeUser.name }
+          </span>
+        </span>
+      </div>
       <div className={ styles.header__icons }>
         <div style={ { position: 'relative' } }>
           <button className={ styles.header__icon }>
@@ -30,7 +38,9 @@ const Header: React.FC = () => {
         <button className={ styles.header__icon_user }
           onClick={ handleModal }
         >
-          <img src={ AvatarImg } alt="пользователь" />
+          <img src={ activeUser.avatar } alt="пользователь"
+            className={ styles.header__icon_user_avatar }
+          />
           <img src={ ArrowImg } alt="меню"
             className={ styles.header__icon_arrow }
           />

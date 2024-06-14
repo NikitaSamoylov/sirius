@@ -26,6 +26,11 @@
     cursor: pointer;
   }
 
+  &__icon_user_avatar {
+    width: 42px;
+    height: 42px;
+  }
+
   &__badge {
     position: absolute;
     top: -4px;
@@ -52,5 +57,21 @@
   &__icon_arrow {
     display: block;
     margin-left: 8px;
+  }
+}
+
+.greetings {
+  padding-left: 32px;
+
+  &__text,
+  &__name {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #323854;
+  }
+
+  &__name {
+    color: #7362BC !important;
+    margin-left: 5px;
   }
 }

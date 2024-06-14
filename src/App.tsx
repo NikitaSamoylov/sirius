@@ -6,7 +6,7 @@ import SignInPage from './pages/sign-in-page/SignInPage';
 import AccountPage from './pages/account-page/AccountPage';
 import MainPage from './pages/main-page/MainPage';
 import ShedulePage from './pages/shedule-page/ShedulePage';
-import Page404 from './pages/404/page404';
+import Page404 from './pages/page404/page404';
 import './App.scss';
 import './assets/fonts/CirceRounded-Bold.woff2';
 import './assets/fonts/CirceRounded-Regular.woff2';

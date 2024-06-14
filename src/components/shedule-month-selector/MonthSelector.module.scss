@@ -1,0 +1,27 @@
+.controllers {
+  display: flex;
+  align-items: center;
+
+  &__date {
+    width: 170px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__month {
+    width: 105px;
+    font-family: 'Circe-Bold';
+    font-size: 1.6rem;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
+  }
+
+  &__arrow {
+    background-color: transparent;
+  }
+
+  &__img_forward {
+    transform: scaleX(-1);
+  }
+}

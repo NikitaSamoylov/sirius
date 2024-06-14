@@ -1,0 +1,36 @@
+.shedule {
+  margin-left: 32px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 29px;
+  }
+
+  &__select {
+    width: 253px;
+  }
+
+  &__controllers {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  &__controllers_btn {
+    color: #323854;
+    font-size: 1.2rem;
+    padding: 8px 20.5px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #8D7FC7;
+    margin-left: 32px;
+  }
+
+  &__controllers_tooltip {
+    display: block;
+    background-color: transparent;
+    margin-left: 16px;
+  }
+}

@@ -1,0 +1,85 @@
+.popup {
+  position: absolute;
+  top: 61px;
+  right: 54px;
+  width: 250px;
+  background-color: #FFFFFF;
+  border: 1px solid #7362BC;
+  border-radius: 12px;
+  padding: 20px;
+
+  &__icon {
+    display: flex;
+    margin-left: auto;
+    background-color: transparent;
+  }
+
+  &__title {
+    font-family: 'Circe-Light';
+    font-size: 1.6rem;
+    line-height: 0;
+    color: #323854;
+    margin-bottom: 18px;
+  }
+}
+
+.users {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EEEEFF;
+
+  &__content {
+    margin-left: 8px;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  &__item_current {
+    background-color: #EEEEFF;
+    border-radius: 12px;
+  }
+
+  &__name {
+    display: block;
+    color: #323854;
+    font-size: 1.2rem;
+  }
+
+  &__current {
+    display: block;
+    font-size: 1rem;
+    font-family: 'Circe-Light';
+    line-height: 1.2rem;
+  }
+
+  &::before {
+    content: url('./polygon.png');
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+  }
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 21px;
+
+  &__btn {
+    font-size: 1.6rem;
+    color: #008AFF;
+    background-color: transparent;
+  }
+
+  &__icon {
+    background-color: transparent;
+  }
+}

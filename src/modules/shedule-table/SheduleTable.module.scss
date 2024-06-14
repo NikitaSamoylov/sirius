@@ -1,0 +1,83 @@
+.table {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  // grid-template-rows: repeat(5, 1fr);
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+    width: 161px;
+    border: 1px solid #ECECEC;
+    height: 101px;
+    color: #C8C5CD;
+    font-size: 1.2rem;
+    font-family: 'Circe-Light';
+    text-align: right;
+    padding: 4px;
+  }
+
+  &__item_days {
+    display: flex;
+    justify-content: flex-end;
+    width: 161px;
+    color: #79747F;
+    font-size: 1.2rem;
+    font-family: 'Circe-Regular';
+    text-align: right;
+    padding: 4px;
+    font-size: 1.5rem;
+  }
+
+  &__item_current {
+    color: #323854;
+  }
+
+  &__lessons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between !important;
+  }
+
+  &__date_content {
+    width: 100%;
+  }
+}
+
+.lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3px;
+  padding: 4px;
+  border: 1px solid #22782B;
+  border-radius: 2px;
+  text-align: left;
+  width: 100%;
+
+  &__not_payed {
+    border-color: red;
+  }
+
+  &__active {
+    background: #D7F0D6;
+    border-color: #D7F0D6;
+  }
+
+  &__time,
+  &__subject {
+    font-family: 'Circe-Regular';
+    color: #323854;
+    font-size: 1rem;
+    line-height: 0.8rem;
+  }
+
+  &__passed {
+    text-decoration: line-through;
+  }
+
+  &__time {
+    margin-bottom: 5px;
+  }
+}

@@ -11,7 +11,6 @@ type TParsedShedule = {
   timeStart: string;
   timeEnd: string;
   teacher: string;
-  passed: boolean;
 };
 
 const Lessons: React.FC = () => {
@@ -36,7 +35,6 @@ const Lessons: React.FC = () => {
             minute: 'numeric'
           }),
         teacher: el.teacher,
-        passed: el.passed,
       }
     })
   ))

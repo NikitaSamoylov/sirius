@@ -6,6 +6,7 @@ import SignInPage from './pages/sign-in-page/SignInPage';
 import AccountPage from './pages/account-page/AccountPage';
 import MainPage from './pages/main-page/MainPage';
 import ShedulePage from './pages/shedule-page/ShedulePage';
+import Page404 from './pages/404/page404';
 import './App.scss';
 import './assets/fonts/CirceRounded-Bold.woff2';
 import './assets/fonts/CirceRounded-Regular.woff2';
@@ -22,6 +23,7 @@ const App: React.FC = () => {
             <Route path='/account' element={ <AccountPage /> }>
               <Route path='/account/shedule' element={ <ShedulePage /> } />
               <Route path='/account/main' element={ <MainPage /> } />
+              <Route path='*' element={ <Page404 /> } />
             </Route>
           </Routes>
         </BrowserRouter>

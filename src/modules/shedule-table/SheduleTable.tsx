@@ -145,8 +145,6 @@ const SheduleTable: React.FC = () => {
     numOfNextMonth.slice(0, -allRenderedDates + 35) :
     [];
 
-  console.log(parsedShedule)
-
   return (
     <div>
       <ul className={ styles.table }>

@@ -17,7 +17,13 @@ const HeaderPopup: React.FC<THeaderPopupProps> = (
   const dispatch = useAppDispatch();
 
   const updateUser = (name: string, avatar: string) => {
-    dispatch(handleUser({ name, avatar }))
+    dispatch(handleUser({ name, avatar }));
+    handleModal();
+  };
+
+  const logOut = () => {
+    dispatch(handleUser({ name: '', avatar: '' }));
+    handleModal();
   };
 
   return (
@@ -36,14 +42,15 @@ const HeaderPopup: React.FC<THeaderPopupProps> = (
         </h3>
         <div className={ styles.users }>
           {
-            usersStore.map(el => {
+            usersStore.map((el, i) => {
               return (
-                <div className={
-                  activeUser.name === el.name ?
-                    `${ styles.users__item }
+                <div key={ i }
+                  className={
+                    activeUser.name === el.name ?
+                      `${ styles.users__item }
                    ${ styles.users__item_current }` :
-                    styles.users__item
-                }
+                      styles.users__item
+                  }
                   onClick={ () => updateUser(el.name, el.avatar) }
                 >
                   <img src={ el.avatar } alt={ el.name } />
@@ -67,12 +74,12 @@ const HeaderPopup: React.FC<THeaderPopupProps> = (
 
         <div className={ styles.exit }>
           <button className={ styles.exit__btn }
-            onClick={ handleModal }
+            onClick={ logOut }
           >
             Выход
           </button>
           <button className={ styles.exit__icon }
-            onClick={ handleModal }
+            onClick={ logOut }
           >
             <img src={ ExitIcon } alt="выход"
               style={ { display: 'block' } }

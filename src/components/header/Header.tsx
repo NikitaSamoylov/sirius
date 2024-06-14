@@ -18,29 +18,45 @@ const Header: React.FC = () => {
 
   return (
     <div className={ styles.header }>
-      <div className={ styles.greetings }>
-        <span className={ styles.greetings__text }>
-          Добро пожаловать,
-          <span className={ styles.greetings__name }>
-            { activeUser.name }
-          </span>
-        </span>
-      </div>
+      {
+        window.location.href.includes('main') &&
+        activeUser.name && (
+          <div className={ styles.greetings }>
+            <span className={ styles.greetings__text }>
+              Добро пожаловать,
+              <span className={ styles.greetings__name }>
+                { activeUser.name }
+              </span>
+            </span>
+          </div>
+        )
+      }
       <div className={ styles.header__icons }>
         <div style={ { position: 'relative' } }>
-          <button className={ styles.header__icon }>
-            <img src={ ChatImg } alt="чат" />
-          </button>
-          <div className={ styles.header__badge }>
-            { messagesStore.length }
-          </div>
+          {
+            activeUser.name && (
+              <>
+                <button className={ styles.header__icon }>
+                  <img src={ ChatImg } alt="чат" />
+                </button>
+                <div className={ styles.header__badge }>
+                  { messagesStore.length }
+                </div>
+              </>
+            )
+          }
+
         </div>
         <button className={ styles.header__icon_user }
           onClick={ handleModal }
         >
-          <img src={ activeUser.avatar } alt="пользователь"
-            className={ styles.header__icon_user_avatar }
-          />
+          {
+            activeUser.avatar && (
+              <img src={ activeUser.avatar } alt="пользователь"
+                className={ styles.header__icon_user_avatar }
+              />
+            )
+          }
           <img src={ ArrowImg } alt="меню"
             className={ styles.header__icon_arrow }
           />

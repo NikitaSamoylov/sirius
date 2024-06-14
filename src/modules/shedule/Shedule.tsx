@@ -1,4 +1,6 @@
-import { useAppDispatch } from '../../hooks';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router';
+import { useAppDispatch, useAppSelector } from '../../hooks';
 import { addDate } from '../../store/current-date-slice/current-date-slice';
 import GlobalBtns from '../../ui/global-buttons/GlobalBtns';
 import SubjectSelect from '../../components/shedule-subject-selector/SubjectSelect';
@@ -10,13 +12,23 @@ import styles from './Shedule.module.scss';
 import TooltipIcon from './tooltip-icon.png';
 
 const Shedule: React.FC = () => {
+  const activeUser = useAppSelector(state => state.activeUser);
   const dispatch = useAppDispatch();
+
+  const navigate = useNavigate();
 
   const setCurrentMonth = () => {
     dispatch(addDate(
       new Date().getMonth() + 1
     ))
   };
+
+  useEffect(() => {
+    if (activeUser.name === '') {
+      navigate('/account/main')
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeUser]);
 
   return (
     <div className={ styles.shedule }>

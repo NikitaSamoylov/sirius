@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useAppSelector } from '../../hooks';
 import HeaderPopup from '../header-popup/HeaderPopup';
 import styles from './Header.module.scss';
 
@@ -7,6 +8,8 @@ import ChatImg from './chat-icon.png';
 import ArrowImg from './Path.png';
 
 const Header: React.FC = () => {
+  const messagesStore = useAppSelector(state => state.messages);
+
   const [isModal, setIsModal] = useState(false);
 
   const handleModal = () => {
@@ -16,9 +19,14 @@ const Header: React.FC = () => {
   return (
     <div className={ styles.header }>
       <div className={ styles.header__icons }>
-        <button className={ styles.header__icon }>
-          <img src={ ChatImg } alt="чат" />
-        </button>
+        <div style={ { position: 'relative' } }>
+          <button className={ styles.header__icon }>
+            <img src={ ChatImg } alt="чат" />
+          </button>
+          <div className={ styles.header__badge }>
+            { messagesStore.length }
+          </div>
+        </div>
         <button className={ styles.header__icon_user }
           onClick={ handleModal }
         >

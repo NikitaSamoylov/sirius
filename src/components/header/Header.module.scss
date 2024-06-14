@@ -26,6 +26,19 @@
     cursor: pointer;
   }
 
+  &__badge {
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    font-family: 'Circe-Bold';
+    color: #fff;
+    font-size: 1rem;
+    line-height: 0.8rem;
+    padding: 4px 6px;
+    border-radius: 50%;
+    background-color: #E84849;
+  }
+
   &__icon_user {
     display: flex;
     align-items: center;

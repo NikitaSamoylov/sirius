@@ -25,7 +25,7 @@ const Shedule: React.FC = () => {
 
   useEffect(() => {
     if (activeUser.name === '') {
-      navigate('/account/main')
+      navigate('/')
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeUser]);

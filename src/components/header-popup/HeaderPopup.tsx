@@ -21,11 +21,6 @@ const HeaderPopup: React.FC<THeaderPopupProps> = (
     handleModal();
   };
 
-  const logOut = () => {
-    dispatch(handleUser({ name: '', avatar: '' }));
-    handleModal();
-  };
-
   return (
     <div className={ styles.popup }>
       <button className={ styles.popup__icon }
@@ -74,12 +69,12 @@ const HeaderPopup: React.FC<THeaderPopupProps> = (
 
         <div className={ styles.exit }>
           <button className={ styles.exit__btn }
-            onClick={ logOut }
+            onClick={ () => console.log('exit') }
           >
             Выход
           </button>
           <button className={ styles.exit__icon }
-            onClick={ logOut }
+            onClick={ () => console.log('log out') }
           >
             <img src={ ExitIcon } alt="выход"
               style={ { display: 'block' } }

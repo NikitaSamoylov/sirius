@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+import { useAppSelector } from '../../hooks';
 import Timer from '../../components/timer/Timer';
 import TasksBalans from '../../components/main-tasks-balans/TasksBalans';
 import Lessons from '../../components/main-lessons/Lessons';
@@ -6,8 +8,18 @@ import styles from './Main.module.scss';
 import SaleImg from './sale-img.png';
 import HomeworkIcon from './homework-icon.png';
 import SheetsIcon from './sheets-icon.png';
+import { useEffect } from 'react';
 
 const Main: React.FC = () => {
+  const navigate = useNavigate();
+  const activeUserStore = useAppSelector(state => state.activeUser);
+
+  useEffect(() => {
+    if (activeUserStore.name === '') {
+      navigate('/')
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeUserStore]);
 
   return (
     <div className="container"
